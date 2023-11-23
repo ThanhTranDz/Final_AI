@@ -8,46 +8,11 @@ import requests as rq
 
 model = load_model('FruitModel.h5')
 labels = {
-    0: 'apple',
-    1: 'banana',
-    2: 'beetroot',
-    3: 'bell pepper',
-    4: 'cabbage',
-    5: 'capsicum',
-    6: 'carrot',
-    7: 'cauliflower',
-    8: 'chilli pepper',
-    9: 'corn',
-    10: 'cucumber',
-    11: 'eggplant',
-    12: 'garlic',
-    13: 'ginger',
-    14: 'grapes',
-    15: 'jalepeño',
-    16: 'kiwi',
-    17: 'lemon',
-    18: 'lettuce',
-    19: 'mango',
-    20: 'onion',
-    21: 'orange',
-    22: 'paprika',
-    23: 'pear',
-    24: 'peas',
-    25: 'pineapple',
-    26: 'pomegranate',
-    27: 'potato',
-    28: 'raddish',
-    29: 'spinach',
-    30: 'soy bean',
-    31: 'spinach',
-    32: 'sweet potato',
-    33: 'sweetcorn',
-    34: 'tomato',
-    35: 'turnip',
-    36: 'watermelon'
+    0: 'apple', 1: 'banana', 2: 'beetroot', 3: 'bell pepper', 4: 'cabbage', 5: 'capsicum', 6: 'carrot', 7: 'cauliflower', 8: 'chilli pepper', 9: 'corn', 10: 'cucumber', 11: 'eggplant', 12: 'garlic', 13: 'ginger', 14: 'grapes', 15: 'jalepeño', 16: 'kiwi', 17: 'lemon', 18: 'lettuce', 19: 'mango', 20: 'onion', 21: 'orange', 22: 'paprika',
+    23: 'pear', 24: 'peas', 25: 'pineapple', 26: 'pomegranate', 27: 'potato', 28: 'raddish', 29: 'soy bean', 30: 'spinach', 31: 'sweet potato', 32: 'sweetcorn', 33: 'tomato', 34: 'turnip', 35: 'watermelon'
 }
-fruits = ["banana", "apple", "pear", "grapes", "orange", "kiwi", "watermelon", "pomegranate", "pineapple", "mango"]
-vegetables = ["cucumber", "carrot", "capsicum", "onion", "potato", "lemon", "tomato", "raddish", "beetroot", "cabbage", "lettuce", "spinach", "soy bean", "cauliflower", "bell pepper", "chilli pepper", "turnip", "corn", "sweetcorn", "sweet potato", "paprika", "jalepeño", "ginger", "garlic", "peas", "eggplant"]
+fruits = ['banana', 'apple', 'pear', 'grapes', 'orange', 'kiwi', 'watermelon', 'pomegranate', 'pineapple', 'mango']
+vegetables = ['cucumber', 'carrot', 'capsicum', 'onion', 'potato', 'lemon', 'tomato', 'raddish', 'beetroot', 'cabbage', 'lettuce', 'spinach', 'soy bean', 'cauliflower', 'bell pepper', 'chilli pepper', 'turnip', 'corn', 'sweetcorn', 'sweet potato', 'paprika', 'jalepeño', 'ginger', 'garlic', 'peas', 'eggplant']
 
 def fetch_calories(prediction):
     url = 'https://api.edamam.com/api/nutrition-data'
@@ -88,5 +53,5 @@ def run():
             cal = fetch_calories(countResult)
 
             if cal:
-                st.warning(f'One {result} contains: {cal} kcal')
+                st.warning(f'Chỉ số calo của 1 quả {countResult}: {cal} kcal')
 run()
