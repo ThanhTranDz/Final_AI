@@ -85,7 +85,6 @@ def run():
                 st.info('Category : Fruit')
             st.success('Prediction: ' + result )
             countResult = '1 ' + str(result)
-            st.success(countResult)
             cal = fetch_calories(countResult)
 
             if cal:
