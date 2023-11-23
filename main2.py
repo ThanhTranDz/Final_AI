@@ -88,5 +88,5 @@ def run():
             cal = fetch_calories(countResult)
 
             if cal:
-                st.warning(f'One {countResult} contains: {cal} kcal')
+                st.warning(f'One {result} contains: {cal} kcal')
 run()
