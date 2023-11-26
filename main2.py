@@ -34,7 +34,7 @@ def processed_img(img_path):
     return res.capitalize()
 
 def run():
-    st.title("Fruits - Vegetable Classification")
+    st.title("Fruits - Vegetable Detection")
     img_file = st.file_uploader("Choose an image",type=["jpg", "png","jpeg"])
     if img_file is not None:
         img = Image.open(img_file).resize((250,250))
